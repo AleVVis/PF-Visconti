@@ -1,0 +1,27 @@
+Buenos días,  algunos datos y algunas consultas:
+DATOS: 
+quiero hacer mi propio portfolio.  Arriba a la derecha quisiera poner un boton para loguearme yo misma y 
+poder actualizarlo cuando sea necesario.  Pero intuyo que es muy complicado.  
+
+No encontré una buena foto para el banner.  De dónde la puedo sacar?  Quisiera algo relacionado con tecnología.
+
+Usé colores en las diferentes cajas porque me ayudan a ubicarme.  Pero los voy a sacar!
+
+
+
+
+CONSULTAS:  
+1   no entiendo por qué el sticky de la navbar me funciona en el index y en las otras pag no.
+
+2   en la pag de contacto quiero hacer 2 formularios.  El segundo todavia no lo pensé por eso repetí el primero.
+
+3.  Está bien poner el footer en la primera página?  o va en la pag de contacto?
+
+
+
+Buenos días K!  corregí todo lo que me marcaste:
+Puse la estructura "header" (con sus hijos "section" y "nav"),  "main" y "footer" en todos los html de mi proyecto 
+y con eso logré que el sticky fincione!.
+Puse todo el material en minusculas.
+Corregí las barras inversas en los url del css
+
