@@ -118,8 +118,14 @@ header ul li a:active{
     display: none;
   }
  
+  /* estilos responsive de la barra de navegación tamaño medio */
+  @media screen and (max-width: 992px) {   
+    .saludo {
+        display: none;
+    }
+  }
 
-/* estilos responsive de la barra de navegación */
+/* estilos responsive de la barra de navegación tamaño chico*/
   @media screen and (max-width: 768px) {
     ul.menu {
       display: none;
