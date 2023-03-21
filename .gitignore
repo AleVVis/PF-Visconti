@@ -42,12 +42,16 @@ $RECYCLE.BIN/
 *.msix
 *.msm
 *.msp
-*.txt
+
 
 # Windows shortcuts
 *.lnk
 
-bootstrap-5.2.3-dist (1).zip
+
+*.txt
+/bootstrap-5.2.3-dist(1).zip
+/bootstrap-5.2.3-dist
+bootstrap-5.2.3-dist(1).zip
 bootstrap-5.2.3-dist
 C:\Users\Otilia\Desktop\PreEntrega2 Visconti\bootstrap-5.2.3-dist (1).zip
 C:\Users\Otilia\Desktop\PreEntrega2 Visconti\bootstrap-5.2.3-dist
