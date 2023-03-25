@@ -161,7 +161,7 @@ header ul li a:active{
 
 .banner{
     align-items: center;
-    background-image: url(/media/imagen-computacion-para-banner4.jpg);
+    background-image: url("../media/imagenbanner4.jpg");
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -179,7 +179,7 @@ header ul li a:active{
 
 
 .banner-contenido .imagen-grande {
-    background-image: url(../media/foto-ale.jpg);
+    background-image: url("../media/foto-ale.jpg");
     background-size: cover;
     border-radius: 50%;
     border: 5px solid #d3d3d3;
@@ -208,7 +208,7 @@ header ul li a:active{
 @media (max-width: 768px) {
 
     .banner {
-        background-image: url(/media/imagen\ banner\ responsive.jpg)
+        background-image: url("../media/imagenbannerresponsive.jpg")
     }
     .banner-contenido {
       padding: 50px 20px 20px 20px;
