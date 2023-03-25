@@ -1,0 +1,574 @@
+@import url("https://use.fontawesome.com/releases/v6.2.1/css/all.css");
+
+
+/* reset / estilos genericos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a { text-decoration: none;}
+
+
+body{
+    background-color: lightgray;
+}
+
+/* estilos de la barra de navegación 
+header{
+    background-color:grey;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: sticky;
+    top: 0;
+}
+
+section div.yo {
+    background-color: transparent;
+    flex-direction: row;
+    display:inline-flex;
+    gap: 8px;
+}
+
+
+nav {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    display:flex;
+    gap: 1rem;    
+}
+
+
+.yo .icono-yo {
+    background-image: url(../media/ale-computacion.jpg);
+    background-position: center;
+    background-size: 100%;
+    border-radius: 100%;
+    border: 5px solid #2c2f3f;
+    height: 70px;
+    width: 70px;
+}
+
+.saludo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 16px;
+}
+
+
+header ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px;   
+}
+
+/* pseudoclase :hover */
+header ul li a:hover{
+    background-color: #B8B799;
+    border-color: #B8B799;
+}
+
+header ul li a:active{
+    padding: 5px;
+}
+
+.btn-login {
+        background-color: #fff;
+        border: none;
+        color: black;
+        cursor: pointer;
+      }
+
+  
+  nav.active .listamenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #333;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+  }
+  
+  nav.active .listamenu li {
+    opacity: 1;
+  }
+  
+  label.menu {
+    display: none;
+  }
+
+  input#check-menu {
+    display: none;
+  }
+ 
+  /* estilos responsive de la barra de navegación tamaño medio */
+  @media screen and (max-width: 992px) {   
+    .saludo {
+        display: none;
+    }
+  }
+
+/* estilos responsive de la barra de navegación tamaño chico*/
+  @media screen and (max-width: 768px) {
+    ul.menu {
+      display: none;
+      position:relative;
+      top: 50px;
+      width: 100%;
+      height: 150px;
+      flex-direction: column;
+      background-color: grey;
+      justify-content: space-around;
+    }
+    
+    .saludo {
+        display: none;
+    }
+
+    label.menu {
+        display: block;
+        font-size: 1.7em;
+        color: white;
+        cursor: pointer
+    }
+    
+    #check-menu:checked ~ul{      /* a traves de la pseudoclase :checked trabajamos el menú hamburguesa en el diseño responsive */
+        display: block;
+    }
+
+
+  }
+
+
+/* estilos del banner */
+
+.banner{
+    align-items: center;
+    background-image: url(/media/imagen-computacion-para-banner4.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+    width: 100%;
+}
+.banner-contenido {
+    align-items: center;
+    display: flex;
+    padding: 70px 200px 50px 50px;
+    width: 100%;
+}
+
+
+
+.banner-contenido .imagen-grande {
+    background-image: url(../media/foto-ale.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid #d3d3d3;
+    height: 250px;
+    width: 250px;
+}
+
+
+.nombre-grande {
+    color: black;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-left: 6rem;
+}
+
+.profesion {
+    color:black;
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 7rem;
+}
+
+/* Estilos responsive del banner */
+@media (max-width: 768px) {
+
+    .banner {
+        background-image: url(/media/imagen\ banner\ responsive.jpg)
+    }
+    .banner-contenido {
+      padding: 50px 20px 20px 20px;
+      
+    }
+  
+    .banner-contenido .imagen-grande {
+     display: none;
+    }
+  
+    .nombre-grande {
+      font-size: 2rem;
+      margin-left: 3rem;
+      color: #fff;
+    }
+  
+    .profesion {
+      font-size: 1.5rem;
+      margin-left: 12rem;
+      color: #fff;
+    }
+  }
+
+/* Estilos para el titulo de todas las pag */
+
+.titulo-skills, .titulo-desarrprofesional, .titulo-contacto, .titulo-sobre-mi{
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+
+.titulo-skills h1, .titulo-contacto h1, .titulo-sobre-mi h1, .titulo-desarrprofesional h1 {
+	font-size: 2rem
+}
+
+
+/* Estilos sobre-mí */
+
+
+/* Estilos para el main */
+.sobre-mi{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	padding: 40px;
+}
+
+.mi-descripcion, .mi-cv, .mis-datos {
+	background-color: #eee;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mi-descripcion {
+	grid-column: 1 / span 2;
+	grid-row: 1;
+}
+
+.mi-cv {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+/*----Boton para descargar cv----*/
+.mi-cv{   
+    margin-top: 1,5rem;
+}
+
+
+.mi-cv a p {
+    font-size: 20px;
+}
+
+.mi-cv a .fa-circle-down {
+    font-size: 1.5rem;
+}
+
+.mi-cv a p, .mi-cv a i {
+    color: blue;
+}
+
+.mis-datos {
+	grid-column: 3;
+	grid-row: 1 / span 3;
+}
+
+
+.dato-personal {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.fa-angle-right{
+    color: grey;
+    font-size: 1.6rem;
+}
+
+.dato-personal .titulo {
+    font-weight: 500;
+}
+
+.dato-personal .info {
+    font-weight: 300;
+}
+.dato-personal .titulo, .dato-personal .info {
+    font-size: 15px;
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+	.sobre-mi {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+	.mis-datos {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+    .mi-cv {
+        grid-column: 1;
+    }
+}
+
+
+/* Estilos skills */
+
+
+/* Estilos para el main */
+.skills {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px;
+	padding: 40px;
+}
+
+.section-skills {
+	background-color: #eee;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+/* Estilos para las progress bar */
+.progress {
+    overflow: hidden;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+      margin-bottom: 30px;
+  }
+  .progress-bar {
+    width: 0;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+   
+  }
+  .progress-striped .progress-bar {
+        background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-size: 40px 40px;
+  }
+  .progress.active .progress-bar {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+    -moz-animation: progress-bar-stripes 2s linear infinite;
+  }
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+	main {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		padding: 20px;
+	}
+}
+
+/* Estilos Desarrollo Profesional */
+
+  
+ #experiencia h1, #educacion h1 {
+    font-size: 50px;
+    padding: 20px;
+  }
+  
+  .row {
+    margin: 8px -16px; background-color:  #eee;
+    border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0.1, 0.1);
+  }
+  
+  /* Padding entre columnas */
+  .row {
+    padding: 8px;
+  }
+  
+
+
+
+/* Estilos de Contacto */
+
+.contacto{
+    background-color: transparent;
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.informacion-de-contacto {
+    background: #eee;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0.1, 0.1);
+    display: block;
+    flex-direction: row;
+    width: 40vw;
+    
+    }
+
+.ubicacion, .email, .telefono {
+    align-items:flex-start;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+  
+
+.ubicacion .fondo-icono-contacto, .email .fondo-icono-contacto, .telefono .fondo-icono-contacto {
+    align-items: center;
+    background-color: rgba(20, 157, 221, 0.2);
+    border-radius: 50%;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    min-width: 44px;
+    width: 44px;
+}
+
+.detalles-contacto {
+    color: #173b6c;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.fondo-icono-contacto i {
+    color: black;
+    font-size: 20px;
+}
+
+.info-contacto .subt-contacto {
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.mapa {
+    align-self: center;
+    height: 180px;
+    margin-top: 20px;
+    width: 90%;
+}
+
+
+
+/* Estilos del Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+  .autor {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .autor p {
+    font-size: 1.2rem;
+  }
+  
+  .autor .hecho-por {
+    font-weight: 400;
+    color: black;
+  }
+  
+  .autor .nombre-chico {
+    font-weight: 400;
+    color: black;
+  }
+  
+  .iconos-footer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .circulo-icono-footer {
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+  }
+  
+  .circulo-icono-footer i {
+    font-size: 1.5rem;
+  }
+  
+  .iconos-footer a:hover {
+    background-color: #587885;
+    transition: none;
+  }
+  
+
+  /* Estilos responsive del Footer */
+
+  @media only screen and (min-width: 768px) {
+    .footer {
+      flex-direction: row;
+      height: 220px;
+    }
+    
+    .autor {
+      padding: 40px;
+    }
+    
+    .iconos-footer {
+      margin-top: 0;
+    }
+  }

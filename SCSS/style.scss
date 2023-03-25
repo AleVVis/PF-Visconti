@@ -1,0 +1,226 @@
+@import url("https://use.fontawesome.com/releases/v6.2.1/css/all.css");
+
+
+/* reset / estilos genericos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a { text-decoration: none;}
+
+body{
+    background-color: lightgray;
+
+/* estilos de la barra de navegación */
+
+.navbar {
+    position: sticky;
+    top: 0;
+}
+
+    div.yo {
+        background-color: transparent;
+        flex-direction: row;
+        display:inline-flex;
+        gap: 8px;
+
+        .icono-yo {
+            background-image: url(../media/ale-computacion.jpg);
+            background-position: center;
+            background-size: 100%;
+            border-radius: 100%;
+            border: 5px solid #2c2f3f;
+            height: 70px;
+            width: 70px;
+        }
+        .saludo {
+            color: red;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-top: 16px;
+        }
+        
+       
+    }
+
+    .collapse {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+
+        ul{
+            display:flex;
+            gap: 1rem;  
+            
+            li a {
+                color: grey;
+                font-size: 18px;
+                text-decoration: none;
+                padding: 5px; 
+                
+                /* pseudoclase :hover */
+                &:hover{
+    background-color: #B8B799;
+    border-color: #B8B799;
+}
+                &:active{
+    padding: 5px;
+}
+            }
+           
+        }
+
+       
+          
+/* estilos responsive de la barra de navegación tamaño medio */
+@media screen and (max-width: 992px) {   
+    saludo {
+      display: none;
+    }
+}
+
+    }
+/* estilos responsive de la barra de navegación tamaño chico*/
+@media screen and (max-width: 768px) {
+ 
+    .saludo {
+        display: none;
+    }
+}
+
+
+/* estilos del banner */
+
+.banner{
+    align-items: center;
+    background-image: url(../media/imagenbanner4.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+    width: 100%;
+
+    .banner-contenido {
+        align-items: center;
+        display: flex;
+        padding: 70px 200px 50px 50px;
+        width: 100%;
+
+        .imagen-grande {
+            background-image: url(../media/foto-ale.jpg);
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid #d3d3d3;
+            height: 250px;
+            width: 250px;
+        }
+        .nombre-grande {
+            color: black;
+            font-family: sans-serif;
+            font-size: 3rem;
+            font-weight: 500;
+            margin-left: 6rem;
+        }
+        .profesion {
+            color:black;
+            font-family: sans-serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-left: 7rem;
+        }
+    }
+}
+
+
+    /* Estilos responsive del banner */
+@media (max-width: 768px) {
+
+    .banner {
+        background-image: url(../media/imagenbannerresponsive.jpg);
+       
+        .banner-contenido {
+            padding: 50px 20px 20px 20px;
+
+            .imagen-grande {
+                display: none;
+            }
+
+            .nombre-grande {
+                font-size: 2rem;
+                margin-left: 3rem;
+                color: red;
+            }
+                
+            .profesion {
+                font-size: 1.5rem;
+                margin-left: 12rem;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* Estilos del Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 40px;
+
+    .autor {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 10px;
+
+        .p {
+            font-size: 1.2rem;
+        }
+
+        .hecho-por {
+            font-weight: 400;
+            color: black;
+        }
+
+        .nombre-chico {
+            font-weight: 400;
+            color: black;
+          }
+      }
+
+    .iconos-footer {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .circulo-icono-footer {
+            align-items: center;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            height: 30px;
+            justify-content: center;
+            width: 30px;
+
+            .circulo-icono-footer i {
+                font-size: 1.5rem;
+            }
+              
+            &:hover {
+                background-color: #587885;
+                transition: none;
+            }
+        }
+    }
+}
+
+  
+}
