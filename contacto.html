@@ -12,7 +12,7 @@
 
 
 <!--Customer Styles-->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!--estilo tipográfico lo traje de google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,45 +23,41 @@
   </head>
 
   <body>
-    <!--header-->
-    <header>
-      <section>
-        <div class="yo">
-          <div class="icono-yo"></div>
-          <h1 class="saludo">Hola! este es mi portfolio</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <div class="yo">
+                <div class="icono-yo"></div>
+                <h2 class="saludo">Hola! este es mi portfolio</h2>
+              </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Index</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sobre-mi.html">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./des-profesional.html">Desarrollo Profesional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+            <li>
+              <button class="btn-login"><i class='bx bxs-user bx-md'></i>
+            </li>             
+          </ul>
         </div>
-      </section>
-
-      <!--menú de navegación-->
-    <nav>
-
-      <!--menú de navegación responsive-->
-      <input type="checkbox" id="check-menu" />
-      <label for="check-menu" class="menu"><i class="bx bx-menu"></i></label>
-        
-      <ul class="menu">
-        <li>
-          <a href="./index.html" class="opciones">Index</a>
-        </li>
-        <li>
-          <a href="./sobre-mi.html" class="opciones">Sobre mí</a>
-        </li>
-        <li>
-          <a href="./skills.html" class="opciones">Skills </a>
-        </li>
-        <li>
-          <a href="./des-profesional.html" class="opciones">Desarrollo Profesional</a>
-        </li>
-        <li>
-          <a href="./contacto.html" class="opciones">Contacto</a>
-        </li>
-        <li>
-          <button class="btn-login"><i class='bx bxs-user bx-md'></i>
-        </li>             <!-- tengo que mejorar este botón-->
-
-      </ul>
+      </div>
     </nav>
-  </header>
 
   <!--sección de contacto-->
   
@@ -103,40 +99,6 @@
             <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.01688788953!2d-58.38375908519529!3d-34.60373446500512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1676579792169!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </article>
-
-      <article>  <!--article repetido lo puse para la estructura. cambiaré la info-->
-        <div class="informacion-de-contacto">
-          <div class="ubicacion">
-              <div class="fondo-icono-contacto">
-                    <i class="fa-sharp fa-solid fa-map-location-dot"></i>
-              </div>
-          <div class="info-contacto">
-              <p class="subt-contacto">Ubicacion:</p>
-              <p class="detalles-contacto">Obelisco, Ciudad de Buenos Aires</p>
-          </div>
-          </div>
-          <div class="email">
-              <div class="fondo-icono-contacto">
-              <i class="fa-solid fa-envelope"></i>
-          </div>
-          <div class="info-contacto">
-              <p class="subt-contacto">Email:</p>
-              <p class="detalles-contacto">alejandra.visconti@hotmail.com</p>
-          </div>
-          </div>
-          <div class="telefono">
-          <div class="fondo-icono-contacto">
-              <i class="fa-solid fa-phone"></i>
-          </div>
-          <div class="info-contacto">
-              <p class="subt-contacto">Telefono:</p>
-              <p class="detalles-contacto">1168619546</p>
-          </div>
-        </div>
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.01688788953!2d-58.38375908519529!3d-34.60373446500512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1676579792169!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-      </div>
-      </article>
 </section>
 </main>
 
@@ -165,7 +127,7 @@
       </a>
     </div>
     </footer> 
-</body>
 <!-- CDN del JS de Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>    
+  </body>
 </html>
