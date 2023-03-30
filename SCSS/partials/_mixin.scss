@@ -1,0 +1,5 @@
+//mixin, función reutulizable y dinámica.
+@mixin sizes($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}

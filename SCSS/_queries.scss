@@ -1,7 +1,7 @@
 /* estilos responsive de la barra de navegación tamaño medio */
 
 /* estilos responsive de la barra de navegación tamaño chico*/
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
  .navbar div.yo {
     .saludo {
         font-size: $fontSizeSmall;
@@ -30,7 +30,6 @@ section.banner {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    width: 100%;
             
     .banner-contenido {
         
@@ -41,11 +40,13 @@ section.banner {
         .contenedor-nombre-descr {
             .nombre-grande {
                 font-size: $fontSizeMid;
-                color: red;
+                color: white;
+                margin-left: 25rem;
             }
             .profesion {
                 font-size: $fontSizeMid;
                 color:white;
+                margin-left: 28rem;
             }
         }
     }
@@ -64,7 +65,6 @@ section.banner {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    width: 100%;
             
     .banner-contenido {
         
@@ -76,10 +76,12 @@ section.banner {
             .nombre-grande {
             font-size: $fontSizeSmall;
             color: #fff;
+            margin-left: 9rem;
             }
             .profesion {
             font-size: $fontSizeSmall;
-            color: red;
+            color: #fff;
+            margin-left: 10rem;
             }
         }
     }
@@ -135,7 +137,7 @@ section.banner {
 }
 
 /* Estilos responsive para Contacto */
-// Estilos para pantalla de ancho menor a 768px
+
 @media (max-width: 768px) {
 
    section.contacto{

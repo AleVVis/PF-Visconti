@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("https://use.fontawesome.com/releases/v6.2.1/css/all.css");
-/* variables */
+@import url("https://use.fontawesome.com/releases/v6.2.1/css/all.css"); /*estilo tipográfico lo traje de google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 /* reset / estilos genericos */
 * {
   margin: 0;
@@ -9,12 +9,14 @@
   list-style: none;
 }
 
+/* variables */
 a {
   text-decoration: none;
 }
 
 body {
-  background-color: lightgray;
+  background-color: lightgrey;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* estilos de la barra de navegación */
   /* estilos del banner */
   /* Estilos del Footer */
@@ -28,6 +30,8 @@ body {
   /* Estilos de Contacto */
 }
 body .navbar {
+  background: rgb(187, 196, 191);
+  background: linear-gradient(90deg, rgb(187, 196, 191) 31%, rgb(255, 255, 255) 100%);
   position: sticky;
   top: 0;
 }
@@ -43,17 +47,23 @@ body div.yo .icono-yo {
   background-size: 100%;
   border-radius: 100%;
   border: 5px solid #2c2f3f;
-  height: 70px;
+  /*height: 70px;
+  width: 70px;*/
   width: 70px;
+  height: 70px;
 }
 body div.yo .saludo {
   font-family: cursive;
-  color: red;
+  color: black;
   font-size: 2rem;
   font-weight: 400;
   padding-top: 16px;
 }
-body .nav-item a:hover {
+body .nav-item {
+  font-weight: 500;
+  font-size: 1rem;
+}
+body .nav-item:hover {
   background-color: #B8B799;
   border-color: #B8B799;
 }
@@ -64,38 +74,41 @@ body .banner {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  height: 400px;
+  /*height: 400px;
+  width: 100%;*/
   width: 100%;
+  height: 400px;
   justify-content: space-between;
   width: 100%;
 }
 body .banner .banner-contenido {
   align-items: center;
   display: flex;
+  /*width: 100%;
+  height: 400px;*/
   width: 100%;
+  height: 400px;
 }
 body .banner .banner-contenido .imagen-grande {
   background-image: url(../media/foto-ale.jpg);
   background-size: cover;
   border-radius: 50%;
   border: 5px solid #d3d3d3;
-  height: 250px;
+  /*height: 250px;
+  width: 250px;*/
   width: 250px;
+  height: 250px;
   margin-left: 20px;
 }
-body .banner .banner-contenido .contenedor-nombre-descr .nombre-grande {
-  color: black;
-  font-family: sans-serif;
-  font-size: 3rem;
+body .banner .banner-contenido .contenedor-nombre-descr .nombre-grande, body .banner .banner-contenido .contenedor-nombre-descr .profesion {
+  color: #fff;
   font-weight: 500;
-  margin-left: 6rem;
+  font-size: 3rem;
+  margin-left: 4rem;
 }
 body .banner .banner-contenido .contenedor-nombre-descr .profesion {
-  color: red;
-  font-family: sans-serif;
   font-size: 2rem;
-  font-weight: 500;
-  margin-left: 7rem;
+  margin-left: 5rem;
 }
 body footer {
   display: flex;
@@ -112,15 +125,14 @@ body footer .autor {
   padding: 10px;
 }
 body footer .autor p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+body footer .autor .nombre-chico, body footer .autor .hecho-por {
+  font-weight: 400;
+  color: black;
 }
 body footer .autor .hecho-por {
-  font-weight: 400;
-  color: black;
-}
-body footer .autor .nombre-chico {
-  font-weight: 400;
-  color: black;
+  font-style: italic;
 }
 body footer .iconos-footer {
   display: flex;
@@ -133,9 +145,11 @@ body footer .iconos-footer .circulo-icono-footer {
   background-color: white;
   border-radius: 50%;
   display: flex;
-  height: 30px;
   justify-content: center;
+  /*width: 30px;
+  height: 30px;*/
   width: 30px;
+  height: 30px;
 }
 body footer .iconos-footer .circulo-icono-footer .circulo-icono-footer i {
   font-size: 1.5rem;
@@ -145,7 +159,8 @@ body footer .iconos-footer .circulo-icono-footer:hover {
   transition: none;
 }
 body .titulo-skills, body .titulo-desarrprofesional, body .titulo-contacto, body .titulo-sobre-mi {
-  background-color: #333;
+  background: rgb(0, 0, 0);
+  background-color: #515468;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -172,6 +187,9 @@ body .sobre-mi .mi-descripcion {
   grid-column: 1/span 2;
   grid-row: 1;
 }
+body .sobre-mi .mi-descripcion h2 {
+  font-size: 1.5rem;
+}
 body .sobre-mi .mi-cv {
   grid-column: 2;
   grid-row: 2;
@@ -179,8 +197,9 @@ body .sobre-mi .mi-cv {
 }
 body .sobre-mi .mi-cv a p {
   font-size: 1.5rem;
+  color: blue;
 }
-body .sobre-mi .mi-cv a p, body .sobre-mi .mi-cv a i {
+body .sobre-mi .mi-cv a p a i {
   color: blue;
 }
 body .sobre-mi .mis-datos {
@@ -268,6 +287,7 @@ body #experiencia h3, body #educacion h3 {
   padding: 20px;
 }
 body .row {
+  align-items: center;
   margin: 8px -16px;
   background-color: #eee;
   border-radius: 10px;
@@ -303,26 +323,29 @@ body .contacto .informacion-de-contacto .ubicacion .fondo-icono-contacto, body .
   background-color: rgba(20, 157, 221, 0.2);
   border-radius: 50%;
   display: flex;
-  height: 44px;
   justify-content: center;
   min-width: 44px;
+  /*width: 44px;
+  height: 44px;*/
   width: 44px;
+  height: 44px;
 }
 body .contacto .informacion-de-contacto .subt-contacto {
   color: black;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.5rem;
 }
 body .contacto .informacion-de-contacto .mapa {
   align-self: center;
-  height: 180px;
   margin-top: 20px;
+  /*width: 100%;
+  height: 180px;*/
   width: 100%;
+  height: 180px;
 }
 
 /* estilos responsive de la barra de navegación tamaño medio */
 /* estilos responsive de la barra de navegación tamaño chico*/
-@media (max-width: 768px) {
+@media (max-width: 1010px) {
   .navbar div.yo .saludo {
     font-size: 1.5rem;
     font-weight: 200;
@@ -344,18 +367,19 @@ body .contacto .informacion-de-contacto .mapa {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    width: 100%;
   }
   section.banner .banner-contenido .imagen-grande {
     display: none;
   }
-  section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande {
+  section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande, body section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 2rem;
-    color: red;
+    color: white;
+    margin-left: 25rem;
   }
   section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 2rem;
     color: white;
+    margin-left: 28rem;
   }
 }
 @media (max-width: 480px) {
@@ -368,18 +392,19 @@ body .contacto .informacion-de-contacto .mapa {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    width: 100%;
   }
   section.banner .banner-contenido .imagen-grande {
     display: none;
   }
-  section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande {
+  section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande, body section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 1.5rem;
     color: #fff;
+    margin-left: 9rem;
   }
   section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 1.5rem;
-    color: red;
+    color: #fff;
+    margin-left: 10rem;
   }
 }
 /* Estilos responsive para Sobre mí */
