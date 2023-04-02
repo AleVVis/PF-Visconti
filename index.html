@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Porfolio Nuevo</title>
+    <meta name="description" content="Portofolio de Alejandra Visconti" />
+    <meta name="keywords" content="Portofolio de Alejandra Visconti" />
+    <title>Porfolio Alejandra Visconti</title>
     <script src="https://kit.fontawesome.com/23ecf5d810.js" crossorigin="anonymous"></script>
 <!--Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -20,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -29,7 +32,7 @@
             <div class="yo">
                 <div class="icono-yo"></div>
                 <h2 class="saludo">Hola! este es mi portfolio</h2>
-              </div>
+                </div>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -64,7 +67,7 @@
     <main>
       <section class="banner">
         <div class="banner-contenido">
-          <div class="imagen-grande"></div>
+          <div class="imagen-grande" data-aos="fade-right"></div>
           <div class="contenedor-nombre-descr">
             <p class="nombre-grande">Alejandra Visconti</p>
             <p class="profesion">Developer</p>
@@ -99,5 +102,9 @@
     </footer>
   <!-- CDN del JS de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body> 
 </html>

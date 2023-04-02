@@ -40,8 +40,10 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
             color: black;
             font-size: $fontSizeMid;
             font-weight: 400;
-            padding-top: 16px;
+            background-position: center;
+            margin-top: 15px;
         }
+
     }
     .nav-item {
         font-weight: 500;
