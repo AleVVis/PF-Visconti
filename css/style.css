@@ -29,7 +29,7 @@ body {
   /* Estilos Desarrollo Profesional */
   /* Estilos de Contacto */
 }
-body .navbar {
+body header {
   background: rgb(187, 196, 191);
   background: linear-gradient(90deg, rgb(187, 196, 191) 31%, rgb(255, 255, 255) 100%);
   position: sticky;
