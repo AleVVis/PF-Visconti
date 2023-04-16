@@ -37,7 +37,7 @@ header {
         }
         .saludo {
             
-            color: black;
+            color: #333;
             font-size: $fontSizeMid;
             font-weight: 400;
             background-position: center;
@@ -54,7 +54,82 @@ header {
     }
     }
     
-          
+       
+    
+
+   
+//con flexbox.
+    .slider {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+        .slide {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+      
+          .content {
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+      
+            img {
+              width: 50%;
+              max-height: 400px;
+              object-fit: cover;
+              margin-right: 20px;
+            }
+      
+            .title {
+              width: 50%;
+              text-align: left;
+      
+              h1 {
+                font-size: $fontSizeMid;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #333;
+              }
+      
+              p {
+                font-size: $fontSizeSmall;
+                line-height: 24px;
+                color: #666;
+              }
+            }
+          }
+      
+          &:nth-child(even) .content {
+            flex-direction: row-reverse;
+      
+            img {
+              margin-right: 0;
+              margin-left: 20px;
+            }
+      
+            .title {
+              text-align: right;
+      
+              h1 {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+      
 
 
    
@@ -138,7 +213,8 @@ footer {
 
         .nombre-chico {
             font-weight: 400px;
-            color: black;
+            color: #333;
+            font-weight: bold
           }
           
         .hecho-por {
@@ -179,7 +255,7 @@ footer {
 /* Estilos para el titulo de todas las pag */
 .titulo-skills, .titulo-desarrprofesional, .titulo-contacto, .titulo-sobre-mi{
 	
-    background: rgb(0,0,0);
+    
     background-color: #515468;
 	color: #fff;
 	display: flex;
@@ -213,7 +289,8 @@ footer {
         grid-column: 1 / span 2;
         grid-row: 1;
         h2 {
-            font-size: $fontSizeSmall;      
+            font-size: $fontSizeSmall;
+            color: #333;   
         }
     }
     
@@ -251,10 +328,12 @@ footer {
                 font-size: $fontSizeSmall;
             }
             .titulo {
-                font-weight:500;
+                font-weight:bold;
+                color: #333;
             }
             .info {
                 font-weight: 300;
+                color: #666;
             }
             .titulo, .info {
                 font-size: 15px;
@@ -282,9 +361,11 @@ footer {
         h2 {
             font-size: $fontSizeSmall;
             margin-bottom: 10px;
+            color: #333;
         }
         p {
             font-size: 1.2rem;
+            color: #666;
         }
     }
 }
@@ -295,6 +376,7 @@ justify-content: baseline;}
 #hardsoftskills h3{
     font-size: $fontSizeMid;
     padding: 20px;
+    color: #333;
   }
 
 /* Estilos para las progress bar */
@@ -338,6 +420,7 @@ animation: progress-bar-stripes 2s linear infinite;
     h3 {
     font-size: $fontSizeMid;
     padding: 20px;
+    color: #333;
   }
 }
   
@@ -351,6 +434,13 @@ animation: progress-bar-stripes 2s linear infinite;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0.1, 0.1);
 
     img {width: 5em;}
+
+    h5 {
+        color: #333;
+    }
+    p {
+        color: #666;
+    }
   }
   
 
@@ -396,9 +486,10 @@ animation: progress-bar-stripes 2s linear infinite;
         /*width: 44px;
         height: 44px;*/
         @include sizes(44px, 44px); //llamo a la función sizes.
+        color: #333;
     }
     .subt-contacto {
-        color: black;
+        color: #666;
         font-size: $fontSizeSmall;
     }
 

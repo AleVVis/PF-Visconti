@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://use.fontawesome.com/releases/v6.2.1/css/all.css"); /*estilo tipográfico lo traje de google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 /* reset / estilos genericos */
 * {
   margin: 0;
@@ -53,7 +54,7 @@ body div.yo .icono-yo {
   height: 70px;
 }
 body div.yo .saludo {
-  color: black;
+  color: #333;
   font-size: 2rem;
   font-weight: 400;
   background-position: center;
@@ -66,6 +67,66 @@ body .nav-item {
 body .nav-item:hover {
   background-color: #B8B799;
   border-color: #B8B799;
+}
+body .slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .slider .slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .slider .slide .content {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+body .slider .slide .content img {
+  width: 50%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+body .slider .slide .content .title {
+  width: 50%;
+  text-align: left;
+}
+body .slider .slide .content .title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+body .slider .slide .content .title p {
+  font-size: 1.5rem;
+  line-height: 24px;
+  color: #666;
+}
+body .slider .slide:nth-child(even) .content {
+  flex-direction: row-reverse;
+}
+body .slider .slide:nth-child(even) .content img {
+  margin-right: 0;
+  margin-left: 20px;
+}
+body .slider .slide:nth-child(even) .content .title {
+  text-align: right;
+}
+body .slider .slide:nth-child(even) .content .title h1 {
+  text-align: right;
 }
 body .banner {
   align-items: center;
@@ -129,7 +190,8 @@ body footer .autor p {
 }
 body footer .autor .nombre-chico, body footer .autor .hecho-por {
   font-weight: 400px;
-  color: black;
+  color: #333;
+  font-weight: bold;
 }
 body footer .autor .hecho-por {
   font-style: italic;
@@ -159,7 +221,6 @@ body footer .iconos-footer .circulo-icono-footer:hover {
   transition: none;
 }
 body .titulo-skills, body .titulo-desarrprofesional, body .titulo-contacto, body .titulo-sobre-mi {
-  background: rgb(0, 0, 0);
   background-color: #515468;
   color: #fff;
   display: flex;
@@ -189,6 +250,7 @@ body .sobre-mi .mi-descripcion {
 }
 body .sobre-mi .mi-descripcion h2 {
   font-size: 1.5rem;
+  color: #333;
 }
 body .sobre-mi .mi-cv {
   grid-column: 2;
@@ -221,10 +283,12 @@ body .sobre-mi .mis-datos .dato-personal .fa-angle-right {
   font-size: 1.5rem;
 }
 body .sobre-mi .mis-datos .dato-personal .titulo {
-  font-weight: 500;
+  font-weight: bold;
+  color: #333;
 }
 body .sobre-mi .mis-datos .dato-personal .info {
   font-weight: 300;
+  color: #666;
 }
 body .sobre-mi .mis-datos .dato-personal .titulo, body .sobre-mi .mis-datos .dato-personal .info {
   font-size: 15px;
@@ -245,9 +309,11 @@ body .skills .section-skills {
 body .skills .section-skills h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #333;
 }
 body .skills .section-skills p {
   font-size: 1.2rem;
+  color: #666;
 }
 body .skills-icon {
   width: 3em;
@@ -256,6 +322,7 @@ body .skills-icon {
 body #hardsoftskills h3 {
   font-size: 2rem;
   padding: 20px;
+  color: #333;
 }
 body .progress {
   overflow: hidden;
@@ -289,6 +356,7 @@ body .progress.active .progress-bar {
 body #experiencia h3, body #educacion h3 {
   font-size: 2rem;
   padding: 20px;
+  color: #333;
 }
 body .row {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -301,6 +369,12 @@ body .row {
 }
 body .row img {
   width: 5em;
+}
+body .row h5 {
+  color: #333;
+}
+body .row p {
+  color: #666;
 }
 body .contacto {
   background-color: transparent;
@@ -338,9 +412,10 @@ body .contacto .informacion-de-contacto .ubicacion .fondo-icono-contacto, body .
   height: 44px;*/
   width: 44px;
   height: 44px;
+  color: #333;
 }
 body .contacto .informacion-de-contacto .subt-contacto {
-  color: black;
+  color: #666;
   font-size: 1.5rem;
 }
 body .contacto .informacion-de-contacto .mapa {
