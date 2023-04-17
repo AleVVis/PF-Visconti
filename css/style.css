@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("https://use.fontawesome.com/releases/v6.2.1/css/all.css"); /*estilo tipográfico lo traje de google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-@import url(https://fonts.googleapis.com/css?family=Nunito);
 /* reset / estilos genericos */
 * {
   margin: 0;
@@ -36,13 +35,13 @@ body header {
   position: sticky;
   top: 0;
 }
-body div.yo {
+body header div.yo {
   background-color: transparent;
   flex-direction: row;
   display: inline-flex;
   gap: 8px;
 }
-body div.yo .icono-yo {
+body header div.yo .icono-yo {
   background-image: url(../media/ale-computacion.jpg);
   background-position: center;
   background-size: 100%;
@@ -53,20 +52,63 @@ body div.yo .icono-yo {
   width: 70px;
   height: 70px;
 }
-body div.yo .saludo {
+body header div.yo .saludo {
   color: #333;
   font-size: 2rem;
   font-weight: 400;
   background-position: center;
   margin-top: 15px;
 }
-body .nav-item {
+body header .nav-item {
   font-weight: 500;
   font-size: 1rem;
 }
-body .nav-item:hover {
+body header .nav-item:hover {
   background-color: #B8B799;
   border-color: #B8B799;
+}
+body .banner {
+  align-items: center;
+  background-image: url(../media/imagenbanner4liviana.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  /*height: 400px;
+  width: 100%;*/
+  width: 100%;
+  height: 400px;
+  justify-content: space-between;
+  width: 100%;
+}
+body .banner .banner-contenido {
+  align-items: center;
+  display: flex;
+  /*width: 100%;
+  height: 400px;*/
+  width: 100%;
+  height: 400px;
+}
+body .banner .banner-contenido .imagen-grande {
+  background-image: url(../media/foto-ale.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  border: 5px solid #d3d3d3;
+  /*height: 250px;
+  width: 250px;*/
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+}
+body .banner .banner-contenido .contenedor-nombre-descr .nombre-grande, body .banner .banner-contenido .contenedor-nombre-descr .profesion {
+  color: #fff;
+  font-weight: 500;
+  font-size: 3rem;
+  margin-left: 4rem;
+}
+body .banner .banner-contenido .contenedor-nombre-descr .profesion {
+  font-size: 2rem;
+  margin-left: 5rem;
 }
 body .slider {
   width: 100%;
@@ -115,61 +157,18 @@ body .slider .slide .content .title p {
   line-height: 24px;
   color: #666;
 }
-body .slider .slide:nth-child(even) .content {
+body .slider .slide:nth-child(even) {
   flex-direction: row-reverse;
 }
-body .slider .slide:nth-child(even) .content img {
-  margin-right: 0;
-  margin-left: 20px;
+body .slider .slide:nth-child(even) img {
+  margin-right: 0px;
+  margin-left: 40px;
 }
-body .slider .slide:nth-child(even) .content .title {
+body .slider .slide:nth-child(even) .title {
   text-align: right;
 }
-body .slider .slide:nth-child(even) .content .title h1 {
+body .slider .slide:nth-child(even) .title h1 {
   text-align: right;
-}
-body .banner {
-  align-items: center;
-  background-image: url(../media/imagenbanner4liviana.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  /*height: 400px;
-  width: 100%;*/
-  width: 100%;
-  height: 400px;
-  justify-content: space-between;
-  width: 100%;
-}
-body .banner .banner-contenido {
-  align-items: center;
-  display: flex;
-  /*width: 100%;
-  height: 400px;*/
-  width: 100%;
-  height: 400px;
-}
-body .banner .banner-contenido .imagen-grande {
-  background-image: url(../media/foto-ale.jpg);
-  background-size: cover;
-  border-radius: 50%;
-  border: 5px solid #d3d3d3;
-  /*height: 250px;
-  width: 250px;*/
-  width: 250px;
-  height: 250px;
-  margin-left: 20px;
-}
-body .banner .banner-contenido .contenedor-nombre-descr .nombre-grande, body .banner .banner-contenido .contenedor-nombre-descr .profesion {
-  color: #fff;
-  font-weight: 500;
-  font-size: 3rem;
-  margin-left: 4rem;
-}
-body .banner .banner-contenido .contenedor-nombre-descr .profesion {
-  font-size: 2rem;
-  margin-left: 5rem;
 }
 body footer {
   display: flex;
@@ -427,8 +426,7 @@ body .contacto .informacion-de-contacto .mapa {
   height: 180px;
 }
 
-/* estilos responsive de la barra de navegación tamaño medio */
-/* estilos responsive de la barra de navegación tamaño chico*/
+/* estilos responsive de la barra de navegación tamaño medio y tamaño chico*/
 @media (max-width: 1010px) {
   .navbar div.yo .saludo {
     font-size: 1.5rem;
@@ -442,7 +440,7 @@ body .contacto .informacion-de-contacto .mapa {
 }
 /* Estilos responsive del banner*/
 @media (max-width: 768px) {
-  section.banner {
+  main section.banner {
     align-items: center;
     background-image: url(../media/imagenbannerresponsiveliviana.jpg);
     background-size: cover;
@@ -452,43 +450,69 @@ body .contacto .informacion-de-contacto .mapa {
     width: 100%;
     justify-content: space-between;
   }
-  section.banner .banner-contenido .imagen-grande {
+  main section.banner .banner-contenido .imagen-grande {
     display: none;
   }
-  section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande, body section.banner .banner-contenido .contenedor-nombre-descr .profesion {
+  main section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande, main body section.banner .banner-contenido .contenedor-nombre-descr .profesion, body main section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 2rem;
     color: white;
     margin-left: 25rem;
   }
-  section.banner .banner-contenido .contenedor-nombre-descr .profesion {
+  main section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 2rem;
     color: white;
     margin-left: 28rem;
   }
 }
 @media (max-width: 480px) {
-  section.banner {
-    align-items: center;
+  main section.banner {
     background-image: url(../media/imagenbannerresponsiveliviana.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
   }
-  section.banner .banner-contenido .imagen-grande {
+  main section.banner .banner-contenido .imagen-grande {
     display: none;
   }
-  section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande, body section.banner .banner-contenido .contenedor-nombre-descr .profesion {
+  main section.banner .banner-contenido .contenedor-nombre-descr .nombre-grande, main body section.banner .banner-contenido .contenedor-nombre-descr .profesion, body main section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 1.5rem;
-    color: #fff;
+    color: red;
     margin-left: 9rem;
   }
-  section.banner .banner-contenido .contenedor-nombre-descr .profesion {
+  main section.banner .banner-contenido .contenedor-nombre-descr .profesion {
     font-size: 1.5rem;
     color: #fff;
     margin-left: 10rem;
+  }
+}
+/* Estilos responsive del agregado en el index*/
+@media only screen and (max-width: 767px) {
+  section.slider {
+    display: flex;
+    flex-direction: column;
+  }
+  section.slider .slide {
+    display: flex;
+    flex-direction: column;
+  }
+  section.slider .slide .content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  section.slider .slide .content img {
+    width: 100%;
+    max-height: 250px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  section.slider .slide .content .title {
+    width: 100%;
+    text-align: center;
+  }
+  section.slider .slide .content .title h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  section.slider .slide:nth-child(even) {
+    display: none;
   }
 }
 /* Estilos responsive para Sobre mí */

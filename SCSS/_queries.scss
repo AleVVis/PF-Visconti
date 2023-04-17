@@ -1,6 +1,4 @@
-/* estilos responsive de la barra de navegación tamaño medio */
-
-/* estilos responsive de la barra de navegación tamaño chico*/
+/* estilos responsive de la barra de navegación tamaño medio y tamaño chico*/
 @media (max-width: 1010px) {
  .navbar div.yo {
     .saludo {
@@ -20,7 +18,7 @@
 
     /* Estilos responsive del banner*/
 @media (max-width: 768px) {
-    
+main{ 
 section.banner {
     align-items: center;
     background-image: url(../media/imagenbannerresponsiveliviana.jpg);
@@ -52,19 +50,16 @@ section.banner {
     }
 }
 }
+}   
 
     
 @media (max-width: 480px) {
+main {
     
 section.banner {
-    align-items: center;
+  
     background-image: url(../media/imagenbannerresponsiveliviana.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    
             
     .banner-contenido {
         
@@ -75,7 +70,7 @@ section.banner {
         .contenedor-nombre-descr {
             .nombre-grande {
             font-size: $fontSizeSmall;
-            color: #fff;
+            color: red;
             margin-left: 9rem;
             }
             .profesion {
@@ -87,6 +82,52 @@ section.banner {
     }
 }
 }
+}  
+
+/* Estilos responsive del agregado en el index*/
+
+
+@media only screen and (max-width: 767px) {
+
+section.slider{
+    display: flex;
+    flex-direction: column;
+    .slide{
+        display: flex;
+        flex-direction: column;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+      img {
+        width: 100%;
+        max-height: 250px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        width: 100%;
+        text-align: center;
+
+        h1 {
+          font-size: $fontSizeSmall;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+     display: none;
+    }
+  }
+}
+}
+ 
+  
+
 
 /* Estilos responsive para Sobre mí */
 @media (max-width: 768px) {
